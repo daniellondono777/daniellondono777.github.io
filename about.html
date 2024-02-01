@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.min.css">
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Paragon</title>
+</head>
+
+<body>
+
+    <header id="header" class="header">
+        <div class="navigation">
+            <div class="container">
+                <nav class="nav">
+                    <div class="nav__logo">
+                        <a href="/" class="scroll-link">
+                            Paragon Cybersecurity LLC
+                        </a>
+                    </div>
+                    <div class="nav__menu">
+                        <div class="menu__top">
+                            <span class="nav__category">Paragon Cybersecurity LLC</span>
+                        </div>
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a href="#header" class="nav__link scroll-link">Home</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#category" class="nav__link scroll-link">Our Story</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#news" class="nav__link scroll-link">Our People</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#contact" class="nav__link scroll-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="hero__btn" onclick="toggleMode()">Toggle Mode</button>
+                </nav>
+            </div>
+        </div>
+
+        <div id="main">
+            <button class="openbtn" onclick="openNav()">&#9776;</button>
+        </div>
+        <div class="hero">
+            <div class="glide" id="glide_1">
+            <ul class="glide__slides">
+                <li class="glide__slide">
+                    <div class="hero__center">
+                        <div class="hero__left">
+                            <h1>About Us</h1>
+                            <span> Welcome to Paragon Cybersecurity, where our journey began with humble roots and a relentless passion for securing the digital frontier. Born out of a shared commitment to excellence, our team embarked on a mission to redefine cybersecurity, one innovation at a time. </span>
+                            <br><br>
+                            <span>In the early days, we faced the challenges that many startups encounter, fueled by determination and the belief that greatness starts from the ground up. Our relentless pursuit of knowledge, coupled with a dedication to staying ahead of the ever-evolving threat landscape, became the cornerstone of Paragon's identity.</span>
+                            <br><br>
+                            <span>The turning point arrived when our expertise captured the attention of industry leaders. John McAfee, a cybersecurity maverick and visionary, was drawn to our commitment to excellence and innovative solutions. His investment marked a pivotal moment, forging a powerful partnership that catapulted Paragon Cybersecurity into the spotlight and paved the way for a transformative era.</span>
+                            <br><br>
+                            <span>Now, armed with a massive contract and a reputation for exceeding expectations, we continue to push the boundaries of cybersecurity. Our story is one of resilience, innovation, and a relentless pursuit of cybersecurity excellence.</span>
+                            <br><br>
+                            <span>Join us on this journey, where every challenge is an opportunity, and every success is a testament to our unwavering commitment to securing the digital future.</span>
+                        <br><br>
+                        <span>Paragon Cybersecurity — Defining Excellence in Cybersecurity.</span>
+                        </div>
+                        <div class="hero__right">
+                            <img class="banner_01" src="https://s.abcnews.com/images/US/TY-mcafee-01-as-170511_16x9_992.jpg" alt="banner1" />
+                        </div>
+                </li>
+            </ul>
+        </div>
+        </div>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="about.html">About</a>
+            <a href="#">Services</a>
+            <a href="clients.hmtl">Clients</a>
+        </div>
+
+    </header>
+        <!-- Footer -->
+        <footer id="footer" class="section footer">
+            <div class="container">
+                <div class="footer__top">
+                    <div class="footer-top__box">
+                        <h3>Daniel Santiago Londoño</h3>
+                        <a href="#">Legal Disclaimer</a>
+                        <a href="#">Gift Shop</a>
+                        <a href="#">Affiliate</a>
+                        <a href="#">Specials</a>
+                        <a href="#">Site Map</a>
+                    </div>
+                </div>
+        </footer>
+        <!-- End Footer -->
+
+        <script src="main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var glide = new Glide('#glide_1', {
+                    // Add your configuration options here
+                    type: 'carousel',
+                    autoplay: 7000, // Example: Autoplay every 5 seconds
+                });
+
+                glide.mount(); // This is important to mount the Glide instance
+            });
+        </script>
+        <script>
+            function toggleMode() {
+                let element = document.body;
+                let content = document.getElementById("DarkModetext");
+                if (element.classList.contains("dark-mode")) {
+                    element.className = "light-mode";
+                } else {
+                    element.className = "dark-mode";
+                }
+            }
+        </script>
+
+</body>
+
+</html>

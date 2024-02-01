@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.min.css">
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Paragon</title>
+</head>
+
+<body>
+
+    <header id="header" class="header">
+        <div class="navigation">
+            <div class="container">
+                <nav class="nav">
+                    <div class="nav__logo">
+                        <a href="/" class="scroll-link">
+                            Paragon Cybersecurity LLC
+                        </a>
+                    </div>
+                    <div class="nav__menu">
+                        <div class="menu__top">
+                            <span class="nav__category">Paragon Cybersecurity LLC</span>
+                        </div>
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a href="#header" class="nav__link scroll-link">Home</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#category" class="nav__link scroll-link">Our Story</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#news" class="nav__link scroll-link">Our People</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#contact" class="nav__link scroll-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="hero__btn" onclick="toggleMode()">Toggle Mode</button>
+                </nav>
+            </div>
+        </div>
+
+        <div id="main">
+            <button class="openbtn" onclick="openNav()">&#9776;</button>
+        </div>
+        <div class="hero">
+            <div class="glide" id="glide_1">
+            <ul class="glide__slides">
+                <li class="glide__slide">
+                    <div class="hero__center">
+                        <div class="hero__left">
+                            <div class="scroll-container">
+                                <div class="image-container">
+                                  <img src="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/it0EaG85ZaW4/v1/-1x-1.jpg" width="400" height="250" alt="MSFT HQ" onclick="replaceText(1)">
+                                  <img src="https://s.wsj.net/public/resources/images/BN-XO396_2uyr1_OR_20180221073413.jpg"  width="400" height="250" alt="JPM HQ" onclick="replaceText(3)">
+                                  <img src="https://cdn1.austinchamber.com/marketing/Blog-Images/tesla_blog.jpg?mtime=20200810145605" width="400" height="250" alt="TSLA HQ" onclick="replaceText(2)">
+                                  <img src="https://www.moroccoworldnews.com/wp-content/uploads/2023/05/aramco-listed-among-top-50-most-innovative-companies-800x600.jpg" width="400" height="250" alt="SAUDIARAMCO HQ" onclick="replaceText(4)">
+                                </div>
+                              </div>
+                              
+                        </div>
+                        <div class="hero__right" id="text-container13">
+                            <h1>Our Clients</h1>
+                        </div>
+                </li>
+            </ul>
+        </div>
+        </div>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="about.html">About</a>
+            <a href="#">Services</a>
+            <a href="clients.html">Clients</a>
+        </div>
+
+    </header>
+        <!-- Footer -->
+        <footer id="footer" class="section footer">
+            <div class="container">
+                <div class="footer__top">
+                    <div class="footer-top__box">
+                        <h3>Daniel Santiago Londoño</h3>
+                        <a href="#">Legal Disclaimer</a>
+                        <a href="#">Gift Shop</a>
+                        <a href="#">Affiliate</a>
+                        <a href="#">Specials</a>
+                        <a href="#">Site Map</a>
+                    </div>
+                </div>
+        </footer>
+        <!-- End Footer -->
+
+        <script src="main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var glide = new Glide('#glide_1', {
+                    // Add your configuration options here
+                    type: 'carousel',
+                    autoplay: 7000, // Example: Autoplay every 5 seconds
+                });
+
+                glide.mount(); // This is important to mount the Glide instance
+            });
+        </script>
+        <script>
+            function toggleMode() {
+                let element = document.body;
+                let content = document.getElementById("DarkModetext");
+                if (element.classList.contains("dark-mode")) {
+                    element.className = "light-mode";
+                } else {
+                    element.className = "dark-mode";
+                }
+            }
+        </script>
+
+</body>
+
+</html>

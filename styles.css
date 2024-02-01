@@ -1,0 +1,455 @@
+:root {
+    --primaryColor: #EFCFA0;
+    --black: #222;
+    --black2: #555;
+    --black3: #914110;
+    --black4: #000;
+    --black5: #212529;
+    --orange: #003beb;
+    --grey: #959595;
+    --grey2: #666;
+    --grey3: #ccc;
+    --secondaryColor: #122620;
+    --white: #ffffff;
+}
+
+.scroll-container {
+    overflow-y: auto;
+    max-height: 300px; /* Set the maximum height as needed */
+  }
+  
+  .image-container {
+    display: flex;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px;
+    transition: transform 0.3s;
+  }
+  
+  img:hover {
+    transform: scale(1.1);
+  }
+  
+  #text-container {
+    margin: 20px;
+  }
+
+img:hover {
+    transform: scale(1.1);
+  }
+  
+
+.sidebar {
+    height: 100%;
+    width: 0; 
+    position: fixed;
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: var(--black2);
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: "Archivo", sans-serif;
+    color: var(--black);
+  }
+
+  .dark-mode {
+    background-color: black;
+    color: white;
+    }
+
+    .light-mode {
+        background-color: white;
+        color: black;
+    }
+  
+  /* The sidebar links */
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* The button used to open the sidebar */
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: var(--primaryColor);
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    background-color: var(--primaryColor);
+    transition: margin-left .5s; /* If you want a transition effect */
+    padding: 0px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+body,
+input {
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-family: "Archivo", sans-serif;
+    color: var(--black);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+h3,
+h4 {
+    font-weight: 500;
+}
+
+/*
+  ======================
+  Header
+  ======================
+  */
+
+.header {
+    position: relative;
+}
+
+.container {
+    max-width: 117rem;
+    margin: 0 auto;
+    padding: 0 1.6rem;
+}
+
+.navigation {
+    position: relative;
+    height: 7rem;
+    background-color: var(--black);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    height: 7rem;
+    padding: 0 1rem;
+    background-color: var(--puce);
+}
+
+
+.nav__logo a {
+    font-size: 2.5rem;
+    color: var(--white);
+    padding: 1.6rem;
+    font-weight: 700;
+}
+
+.nav__hamburger svg {
+    height: 2.3rem;
+    width: 2.3rem;
+}
+
+.menu__top {
+    display: none;
+}
+
+.nav__menu {
+    width: 50%;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+.nav__item:not(:last-child) {
+    margin-right: 1.6rem;
+}
+
+.nav__list .nav__link:link,
+.nav__list .nav__link:visited {
+    display: inline-block;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: var(--white);
+    transition: color 0.3s ease-in-out;
+    flex: auto;
+}
+
+.nav__list .nav__link:hover {
+    color: var(--black3);
+}
+
+
+
+/*
+  ======================
+  Hero Area
+  ======================
+  */
+
+.hero,
+.hero .glide__slides {
+    background-color: var(--primaryColor);
+    position: relative;
+    width: 100%;
+    height: 80vh;
+}
+
+.hero .glide__bullet {
+    background-color: #222;
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.hero .glide__arrow {
+    padding: 1.5rem 1.7rem;
+    opacity: 0;
+    border: none;
+    background-color: var(--grey);
+    transition: all 0.5s ease-in-out 0.2s;
+}
+
+.glide__arrow:hover {
+    background-color: var(--black);
+}
+
+.glide__arrow--left {
+    left: 20rem;
+}
+
+.glide__arrow--right {
+    position: absolute;
+    right: 20rem;
+}
+
+.hero:hover .glide__arrow {
+    opacity: 1;
+}
+
+.hero:hover .glide__arrow--left {
+    left: 23rem;
+}
+
+.hero:hover .glide__arrow--right {
+    right: 23rem;
+}
+
+.hero .glide__arrow svg {
+    height: 1.8rem;
+    width: 1.8rem;
+    fill: var(--primaryColor);
+}
+
+.hero .glide__arrow {
+    border-radius: 50%;
+}
+
+.hero__center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 114rem;
+    margin: 0 auto;
+    height: 100%;
+    padding-top: 3rem;
+}
+
+.hero__left {
+    padding: 0 3rem;
+    flex: 0 0 50%;
+}
+
+.hero__btn {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.4rem;
+    background-color: var(--black);
+    color: var(--primaryColor);
+    cursor: pointer;
+    margin-top: 1rem;
+    padding: 1.5rem 4rem;
+    border: 1px solid var(--black);
+    transition: all 0.3s ease-in-out;
+}
+
+.hero__btn:focus {
+    outline: none;
+}
+
+.hero__left .hero__btn:hover {
+    font-weight: 700;
+    background-color: transparent;
+    color: var(--black);
+}
+
+.hero__left h1 {
+    margin: 1rem 0;
+}
+
+.hero__left p {
+    margin-bottom: 1rem;
+}
+
+.hero__right {
+    flex: 0 0 50%;
+    position: relative;
+    text-align: center;
+}
+
+.hero__right img.banner_03 {
+    width: 70%;
+}
+
+/*
+  ======================
+  Hero Media Query
+  ======================
+  */
+@media only screen and (max-width: 999px) {
+    .hero__center {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero__right {
+        top: 50%;
+        position: absolute;
+    }
+
+    .hero__left {
+        position: absolute;
+        padding: 0 1rem;
+        top: 20%;
+    }
+
+    .hero__right img {
+        width: 55%;
+    }
+
+    .hero__btn {
+        padding: 1.1rem 2.8rem;
+    }
+
+    .hero .glide__arrows {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 567px) {
+
+    .hero,
+    .hero .glide__slides {
+        height: 80%;
+    }
+
+    .hero__right {
+        display: none;
+    }
+}
+
+.footer {
+    background-color: var(--secondaryColor);
+    padding: 6rem 1rem;
+    line-height: 3rem;
+}
+
+.footer-top__box span svg {
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: var(--grey3);
+}
+
+.footer-top__box span {
+    margin-right: 1rem;
+}
+
+.footer__top {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    color: var(--grey3);
+}
+
+.footer-top__box a:link,
+.footer-top__box a:visited {
+    display: block;
+    color: var(--grey);
+    font-size: 1.4rem;
+    transition: 0.6s;
+}
+
+.footer-top__box a:hover {
+    color: var(--orange);
+}
+
+.footer-top__box div {
+    color: var(--grey);
+    font-size: 1.4rem;
+}
+
+.footer-top__box h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
