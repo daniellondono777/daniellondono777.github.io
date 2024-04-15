@@ -1,166 +1,182 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Welcome</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload landing">
+		<div id="page-wrapper">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">Daniel Londoño</a></h1>
+					<nav id="nav">
+						<ul>
+						</ul>
+					</nav>
+				</header>
 
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.min.css">
-    <link rel="stylesheet" href="styles.css" />
+			<!-- Banner -->
+				<section id="banner">
+					<div class="content">
+						<header>
+							<h2>Hi! I'm Daniel</h2>
+							<p>I specialize in Web Development, Data Engineering, <br />
+							and Cybersecurity.</p>
+						</header>
+						<span class="image"><img src="images/me.jpg" alt="" /></span>
+					</div>
+					<a href="#one" class="goto-next scrolly">Next</a>
+				</section>
 
-    <title>Paragon</title>
-</head>
+			<!-- One -->
+				<section id="one" class="spotlight style1 bottom">
+					<span class="image fit main"><img src="images/mimikatz.jpeg" alt="" /></span>
+					<div class="content">
+						<div class="container">
+							<div class="row">
+								<div class="col-4 col-12-medium">
+									<header>
+										<h2>Systems and Computer Engineer</h2>
+										<p>University of Los Andes, Bogota, Colombia.</p>
+									</header>
+								</div>
+								<div class="col-4 col-12-medium">
+									<p>I have over two years of professional experience developing Web and Data solutions. 
+                                       I'm very passionate about Cybersecurity. Currently pursuing OffSec's OSCP, I want to
+                                       integrate my knowledge to develop secure solutions, hacker-proof. 
+                                    </p>
+								</div>
+								<div class="col-4 col-12-medium">
+									<p>I'm happy to connect and collaborate with professionals, I can work as freelancer, part-time, or full-time! Currently seeking for opportunities!
+                                        Here I'll be shwocasing the projects I've worked at! Please feel free to contact me if you have any questions regarding my work! </p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a href="#two" class="goto-next scrolly">Next</a>
+				</section>
 
-<body>
+			<!-- Two -->
+				<section id="two" class="spotlight style2 right">
+					<span class="image fit main"><img src="images/airhub.png" alt="" /></span>
+					<div class="content">
+						<header>
+							<h2>FlyHub</h2>
+							<p>FlyHub is a website for tracking live flights worldwide.</p>
+						</header>
+						<p>We used technologies such as Bootstrap, React.js, Express.js and MongoDB in order to develop the application.</p>
+						<ul class="actions">
+							<li><a href="https://github.com/Carlos2902/AirHub-Travel-Tracker/tree/expressjs" class="button">View Project</a></li>
+						</ul>
+					</div>
+					<a href="#three" class="goto-next scrolly">Next</a>
+				</section>
 
-    <header id="header" class="header">
-        <div class="navigation">
-            <div class="container">
-                <nav class="nav">
-                    <div class="nav__logo">
-                        <a href="/" class="scroll-link">
-                            Paragon Cybersecurity LLC
-                        </a>
-                    </div>
+			<!-- Three -->
+				<section id="three" class="spotlight style3 left">
+					<span class="image fit main bottom"><img src="images/travelagency.png" alt="" /></span>
+					<div class="content">
+						<header>
+							<h2>Travel Agency</h2>
+							<p>This project is a website for a client that wants to digitalize their travel services in a website. </p>
+						</header>
+						<p>We used technologies such as Bootstrap, HTML/CSS and JQuery.</p>
+						<ul class="actions">
+							<li><a href="https://github.com/Carlos2902/WDDM_Project/tree/main" class="button">View Project</a></li>
+						</ul>
+					</div>
+					<a href="#four" class="goto-next scrolly">Next</a>
+				</section>
 
-                    <div class="nav__menu">
-                        <div class="menu__top">
-                            <span class="nav__category">Paragon Cybersecurity LLC</span>
-                        </div>
-                        <ul class="nav__list">
-                            <li class="nav__item">
-                                <a href="#header" class="nav__link scroll-link">Home</a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#category" class="nav__link scroll-link">Our Story</a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#news" class="nav__link scroll-link">Our People</a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#contact" class="nav__link scroll-link">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <button class="hero__btn" onclick="toggleMode()">Toggle Mode</button>
-                </nav>
-            </div>
-        </div>
+			<!-- Four -->
+				<section id="four" class="wrapper style1 special fade-up">
+					<div class="container">
+						<header class="major">
+							<h2>Other Great Projects</h2>
+							<p>Collection of the best projects I've done :)</p>
+						</header>
+						<div class="box alt">
+							<div class="row gtr-uniform">
+								<section class="col-4 col-6-medium col-12-xsmall">
+									<span class="icon solid alt major fa-chart-area"></span>
+									<h3>A Machine Learning Approach for Forecasting Financial Bubbles</h3>
+									<p>My undergraduate senior thesis project.</p>
+								</section>
+								<section class="col-4 col-6-medium col-12-xsmall">
+									<span class="icon solid alt major fa-comment"></span>
+									<h3>Corporate Lobbying Cracker</h3>
+									<p>An API designed to tail congressmen Corporate Lobbying-motivated trades.</p>
+								</section>
+								<section class="col-4 col-6-medium col-12-xsmall">
+									<span class="icon solid alt major fa-flask"></span>
+									<h3>NRU Algorithm System</h3>
+									<p>Java project simulating the NRU Replacement Algorithm. This algorithm removes a page at random from the lowest numbered non-empty class.</p>
+								</section>
+								<section class="col-4 col-6-medium col-12-xsmall">
+									<span class="icon solid alt major fa-paper-plane"></span>
+									<h3>Trip Advisor Data Collector</h3>
+									<p>Massive web crawler designed to gather data from Trip Advisor.</p>
+								</section>
+								<section class="col-4 col-6-medium col-12-xsmall">
+									<span class="icon solid alt major fa-file"></span>
+									<h3>Hedge Fund Management System</h3>
+									<p>A system for managing a Hedge Fund as required by one of my clients.</p>
+								</section>
+								<section class="col-4 col-6-medium col-12-xsmall">
+									<span class="icon solid alt major fa-lock"></span>
+									<h3>Philosopher's Problem</h3>
+									<p>The Dining Philosophers problem is one of the classic problems used to describe synchronization issues in a multi-threaded environmen.</p>
+								</section>
+							</div>
+						</div>
+						<footer class="major">
+							<ul class="actions special">
+								<li><a href="https://github.com/daniellondono777?tab=repositories" class="button">View These Projects and More!</a></li>
+							</ul>
+						</footer>
+					</div>
+				</section>
 
-        <div id="mySidebar" class="sidebar">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="about.html">About</a>
-            <a href="#">Services</a>
-            <a href="clients.html">Clients</a>
-        </div>
+			<!-- Five -->
+				<section id="five" class="wrapper style2 special fade">
+					<div class="container">
+						<header>
+							<h2>Technologies I work with:</h2>
+							<ul style="list-style-type:none;">
+                                <li style="text-align:left;">Programming Languages: Javascript, ASP.NET, Golang, Python</li>
+                                <li style="text-align:left;">AWS Services: S3, Lambda, Cloudwatch, RDS, DynamoDB</li>
+                                <li style="text-align:left;">Web Frameworks: Django, Express.js, .NET Core</li>
+                                <li style="text-align:left;">Other Tools: Apache Airflow, Kafka, Snowflake</li>
+                              </ul>                            
+						</header>
 
-        <div id="main">
-            <button class="openbtn" onclick="openNav()">&#9776;</button>
-        </div>
+					</div>
+				</section>
 
-        <!-- Hero -->
-        <div class="hero">
-            <div class="glide" id="glide_1">
-                <div class="glide__track" data-glide-el="track">
-                    <ul class="glide__slides">
-                        <li class="glide__slide">
-                            <div class="hero__center">
-                                <div class="hero__left">
-                                    <span>Must Reads</span>
-                                    <h1>CEO Santiago Londoño talks Deserialization attacks with AI</h1>
-                                    <p>
-                                        Paragon Cybersecurity's CEO, Santiago Londoño, recently delved into the intricate realm of cybersecurity, addressing the looming threat of Deserialization attacks in a conversation enriched by the power of artificial intelligence (AI). In a thought-provoking dialogue, Londoño elucidated the complexities of Deserialization vulnerabilities and their potential impact on digital ecosystems. Harnessing the capabilities of AI, the discussion navigated through proactive measures and innovative strategies to mitigate the risks posed by these sophisticated cyber threats. Londoño's insights not only underscored Paragon's commitment to staying at the forefront of cybersecurity discourse but also showcased the organization's dedication to leveraging advanced technologies in safeguarding digital landscapes. As the cyber landscape evolves, the convergence of expert leadership and AI-driven insights positions Paragon Cybersecurity as a pioneering force in navigating the intricacies of modern cyber threats.</p>
-                                    <a href="#"><button class="hero__btn">WATCH REPLAY</button></a>
-                                </div>
-                                <div class="hero__right">
-                                    <img class="banner_01" src="https://i.insider.com/63f015875ca81e0018556749?width=700" alt="banner1" />
-                                </div>
-                            </div>
-                        </li>
-                        <li class="glide__slide">
-                            <div class="hero__center">
-                                <div class="hero__left">
-                                    <span>Latest News</span>
-                                    <h1>Paragon Cybersecurity signs $2.3B deal with J.P Morgan</h1>
-                                    <p>
-                                        In a groundbreaking move that has sent shockwaves through the business world, Paragon Cybersecurity has just inked a monumental $2.3 billion deal with financial giant J.P. Morgan. This strategic partnership marks a significant milestone for both entities, setting the stage for collaborative ventures at the intersection of cybersecurity and finance. The deal promises to usher in a new era of innovation, leveraging Paragon's cutting-edge cybersecurity solutions to bolster J.P. Morgan's digital defenses. As the global landscape becomes increasingly interconnected, this alliance positions Paragon Cybersecurity as a key player in fortifying critical financial infrastructure. The industry eagerly anticipates the synergies that will unfold, shaping the future of cybersecurity in the financial sector.</p>
-                                    <a href="#"><button class="hero__btn">READ FULL STORY</button></a>
-                                </div>
-                                <div class="hero__right">
-                                    <img class="banner_02" src="https://tbri.com/wp-content/uploads/2023/10/shaking-hands-5217122_1280-1030x686.jpg" alt="banner2" />
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="glide__bullets" data-glide-el="controls[nav]">
-                    <button class="glide__bullet" data-glide-dir="=0"></button>
-                    <button class="glide__bullet" data-glide-dir="=1"></button>
-                </div>
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/daniel-santiago-londo%C3%B1o-60189a132/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/daniellondono777" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="contactmethroughlinkedin@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+				</footer>
 
-                <div class="glide__arrows" data-glide-el="controls">
-                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
-                        <svg>
-                            <use xlink:href="./images/sprite.svg#icon-arrow-left2"></use>
-                        </svg>
-                    </button>
-                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
-                        <svg>
-                            <use xlink:href="./images/sprite.svg#icon-arrow-right2"></use>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- End Header -->
+		</div>
 
-    <!-- Footer -->
-    <footer id="footer" class="section footer">
-        <div class="container">
-            <div class="footer__top">
-                <div class="footer-top__box">
-                    <h3>Daniel Santiago Londoño</h3>
-                    <a href="#">Legal Disclaimer</a>
-                    <a href="#">Gift Shop</a>
-                    <a href="#">Affiliate</a>
-                    <a href="#">Specials</a>
-                    <a href="#">Site Map</a>
-                </div>
-            </div>
-    </footer>
-    <!-- End Footer -->
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
-    <script src="main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var glide = new Glide('#glide_1', {
-                // Add your configuration options here
-                type: 'carousel',
-                autoplay: 7000, // Example: Autoplay every 5 seconds
-            });
-    
-            glide.mount(); // This is important to mount the Glide instance
-        });
-    </script>
-    <script>
-        function toggleMode() {
-            let element = document.body;
-            let content = document.getElementById("DarkModetext");
-            if (element.classList.contains("dark-mode")) {
-                element.className = "light-mode";
-            } else {
-                element.className = "dark-mode";
-            }
-        }
-    </script>
-
-</body>
-
+	</body>
 </html>
