@@ -2558,14 +2558,17 @@
     }
 
     .logo__link {
+      position: relative;
       padding: 4px 0;
       font-family: "Jost", Helvetica Neue, Helvetica, Arial, sans-serif;
       font-size: 28px;
       letter-spacing: -1px;
       line-height: 1;
       font-weight: 700;
-      transition: color .25s ease
+      transition: color .25s ease;
+      z-index: 150;
     }
+
 
     .logo__link:hover {
       color: var(--brand-color)
@@ -2587,8 +2590,6 @@
         right: 0;
         bottom: 0;
         z-index: 100;
-        opacity: 0;
-        visibility: hidden;
         background-color: var(--background-color)
       }
 
@@ -2658,10 +2659,11 @@
     @media only screen and (max-width: 1024px) {
       .main-nav__box {
         display: block;
+        position: relative;
         align-items: center;
         width: 80%;
         height: 80vh;
-        padding-top: 180px;
+        padding-top: 200px;
         margin: 0 auto;
         text-align: center;
         overflow-y: auto
@@ -2685,10 +2687,26 @@
       }
     }
 
-    @media only screen and (max-width: 768px) {
-      .main-nav__box {
-        padding-top: 100px
-      }
+    .hideAll {
+      display: none;
+      opacity: 0;
+    }
+
+    .white_bg {
+      visibility: visible;
+      opacity: 100;
+      display: block;
+      position: fixed;  /* que se quede fijo sobre todo */
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: white;
+      z-index: 10;
+    }
+
+    body.noscroll {
+      overflow: hidden; /* evita el scroll cuando el overlay está activo */
     }
 
     .nav__list {
@@ -4401,6 +4419,10 @@
 
   <!-- begin header -->
   <header class="header" id="top">
+    <div id="hideBg" class="hideAll">
+
+    </div>
+
     <div class="container">
       <div class="row">
         <div class="header__inner col col-12">
@@ -4416,10 +4438,10 @@
           <nav class="main-nav">
             <div class="main-nav__box">
               <div class="nav__icon-close">
-                <i class="ion ion-md-close"></i>
+                <i id="btn" class="ion ion-md-menu"></i>
               </div>
-              <div class="nav__title">Menu</div>
-              <ul class="nav__list list-reset">
+              <div id="hideElem1" class="nav__title hideAll">Menu</div>
+              <ul id="hideElem2" class="nav__list list-reset">
                 <li class="nav__item">
                   <a href="/" class="nav__link">Home</a>
                 </li>
@@ -4634,6 +4656,35 @@
 
   <script src="/js/scripts.js"></script>
   <script src="/js/common.js"></script>
+      <script>
+    const btn = document.getElementById("btn");
+    const hideElem1 = document.getElementById("hideElem1");
+    const hideElem2 = document.getElementById("hideElem2");
+    const hideBg = document.getElementById("hideBg");
+
+    btn.addEventListener("click", () => {
+      hideBg.classList.toggle("hideAll");
+      hideBg.classList.toggle("white_bg");
+      hideElem1.classList.toggle("hideAll");
+      hideElem2.classList.toggle("hideAll");
+      document.body.classList.toggle("noscroll");
+    });
+
+      window.addEventListener("resize", () => {
+      if (window.innerWidth > 1024) {
+        hideBg.classList.add("hideAll")
+        hideBg.classList.remove("white_bg")
+        hideElem1.classList.add("hideAll");
+        hideElem2.classList.remove("hideAll");
+      } else {
+        if (hideElem1.classList.contains("hideAll")) {
+          hideElem2.classList.add("hideAll")
+        } else {
+          hideElem2.classList.remove("hideAll")
+        }
+      }
+    });
+  </script>
 </body>
 
 </html>
