@@ -4665,20 +4665,26 @@
       document.body.classList.toggle("noscroll");
     });
 
-      window.addEventListener("resize", () => {
-      if (window.innerWidth > 1024) {
-        hideBg.classList.add("hideAll")
-        hideBg.classList.remove("white_bg")
-        hideElem1.classList.add("hideAll");
-        hideElem2.classList.remove("hideAll");
+  function checkScreenWidth() {
+    if (window.innerWidth > 1024) {
+      hideBg.classList.add("hideAll");
+      hideBg.classList.remove("white_bg");
+      hideElem1.classList.add("hideAll");
+      hideElem2.classList.remove("hideAll");
+    } else {
+      if (hideElem1.classList.contains("hideAll")) {
+        hideElem2.classList.add("hideAll");
       } else {
-        if (hideElem1.classList.contains("hideAll")) {
-          hideElem2.classList.add("hideAll")
-        } else {
-          hideElem2.classList.remove("hideAll")
-        }
+        hideElem2.classList.remove("hideAll");
       }
-    });
+    }
+  }
+
+  // Ejecutar al primer renderizado
+  window.addEventListener("DOMContentLoaded", checkScreenWidth);
+
+  // Ejecutar también en cada resize
+  window.addEventListener("resize", checkScreenWidth);
   </script>
 </body>
 
