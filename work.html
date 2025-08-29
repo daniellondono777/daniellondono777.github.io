@@ -356,6 +356,48 @@
       margin-bottom: 10px
     }
 
+    .btn-circ {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+
+  background-color: #ffffff !important; /* BLANCO SÓLIDO asegurado */
+  background: #ffffff !important;       /* refuerzo */
+  
+  border: 1px solid #dcdcdc;            /* borde gris suave para distinguirlo */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.btn-circ i {
+  font-size: 26px;
+  color: #000; /* ícono negro para contraste */
+  z-index: 1;  /* aseguramos que el icono se vea encima */
+}
+
+
+.btn-circ:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3);
+}
+
+.btn-circ:active {
+  transform: scale(0.95);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+
     .highlight {
       margin-bottom: 32px;
       background: var(--syntax-highlighting-background)
@@ -4437,7 +4479,7 @@
 
           <nav class="main-nav">
             <div class="main-nav__box">
-              <div class="nav__icon-close">
+              <div class="nav__icon-close btn-circ">
                 <i id="btn" class="ion ion-md-menu"></i>
               </div>
               <div id="hideElem1" class="nav__title hideAll">Menu</div>
