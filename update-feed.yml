@@ -1,0 +1,47 @@
+name: Regenerate feed
+
+on:
+  schedule:
+    # Runs every 6 hours
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  build-feed:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install feedparser requests
+
+      - name: Generate feed.json
+        env:
+          # ── Configure these in repo Settings → Secrets ──
+          YOUTUBE_CHANNEL_ID: ${{ secrets.YOUTUBE_CHANNEL_ID }}
+          MEDIUM_USERNAME:    ${{ secrets.MEDIUM_USERNAME }}
+          GITHUB_USERNAME:    ${{ secrets.GH_USERNAME }}
+          # X/Twitter: the API is paywalled, so we use a pinned thread list
+          # Add your thread URLs as a newline-separated secret
+          X_PINNED_THREADS:   ${{ secrets.X_PINNED_THREADS }}
+        run: python generate_feed.py
+
+      - name: Commit updated feed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add feed.json
+          git diff --staged --quiet || git commit -m "chore: update feed [skip ci]"
+          git push

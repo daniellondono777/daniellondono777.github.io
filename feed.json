@@ -1,0 +1,33 @@
+{
+    "updated_at": "2026-06-07T12:00:00Z",
+    "items": [
+      {
+        "type": "youtube",
+        "title": "Entra ID Device Code Flow — OAuth Abuse from Scratch",
+        "date": "Jun 2026",
+        "meta": "youtube · 4,200 views",
+        "url": "https://youtube.com/watch?v=REPLACE_ME"
+      },
+      {
+        "type": "research",
+        "title": "Living Off The Cloud: A GCP Adversary Taxonomy",
+        "date": "May 2026",
+        "meta": "research · github release",
+        "url": "https://github.com/zgiancana/lotc-gcp"
+      },
+      {
+        "type": "medium",
+        "title": "axios Supply Chain Attack — Deobfuscating the XOR Dropper",
+        "date": "Apr 2026",
+        "meta": "medium · 8 min read",
+        "url": "https://medium.com/@zgiancana/axios-supply-chain"
+      },
+      {
+        "type": "x",
+        "title": "FOCI abuse thread — six techniques, one refresh token",
+        "date": "Mar 2026",
+        "meta": "x · @zgiancana",
+        "url": "https://x.com/zgiancana/status/REPLACE_ME"
+      }
+    ]
+  }
