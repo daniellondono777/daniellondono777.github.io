@@ -1,15 +1,3 @@
-"""
-generate_feed.py
-Pulls items from YouTube, Medium, GitHub releases, and manually-pinned X threads.
-Outputs feed.json consumed by index.html.
-
-Configure via environment variables (set as GitHub repo secrets):
-  YOUTUBE_CHANNEL_ID   e.g. UCxxxxxxxxxxxxxxxxxxxxxx
-  MEDIUM_USERNAME      e.g. zgiancana  (without @)
-  GITHUB_USERNAME      e.g. zgiancana
-  X_PINNED_THREADS     newline-separated tweet URLs (since X API is paywalled)
-"""
-
 import os
 import json
 import re
